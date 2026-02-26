@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job tracker</title>
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome cdn  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- daisy ui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      * {
+        font-family: "Geist", sans-serif;
+      }
+      .active-tab{
+        background-color: blue !important;
+        color: white !important;
+      }
+    </style>
+  </head>
+  <body class="bg-base-200 min-h-screen px-4 md:px-0">
+    <section class="pt-[40px] md:pt-[60px] container mx-auto mb-8">
+      <h4 class="text-2xl font-bold mb-[20px]">Job Application Tracker</h4>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-base-100 p-5 rounded-md">
+          <p class="font-bold">Total</p>
+          <h3 id="Total-job-applied" class="text-2xl font-bold">8</h3>
+        </div>
+        <div class="bg-base-100 p-5 rounded-md">
+          <p class="font-bold">Interview</p>
+          <h3 id="Interview-given" class="text-2xl font-bold text-green-600">
+            0
+          </h3>
+        </div>
+        <div class="bg-base-100 p-5 rounded-md">
+          <p class="font-bold">Rejected</p>
+          <h3 id="Rejected-job" class="text-2xl font-bold text-red-600">0</h3>
+        </div>
+      </div>
+    </section>
+    <hr class="text-base-300 mb-8 container mx-auto" />
+    <section class="container mx-auto">
+      <div class="flex justify-between items-center mb-6">
+        <h4 class="text-xl font-bold">Available Jobs</h4>
+        <p id="Total-job">8 jobs</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button
+          id="All-job-tab"
+          class="btn bg-white  px-6"
+        >
+          All
+        </button>
+        <button
+          id="Interview-tab"
+          class="btn bg-white px-6"
+        >
+          Interview
+        </button>
+        <button
+          id="Rejected-tab"
+          class="btn bg-base-100 px-6"
+        >
+          Rejected
+        </button>
+      </div>
+
+      <div id="job-container" class="container mx-auto mt-4 space-y-4">
+       
+      </div>
+      <div id="no-job-preview" class=" flex flex-col justify-center items-center py-16 md:py-[120px] bg-base-100 rounded ">
+        <div class="w-[100px] h-[100px]">
+          <img src="./assets/doc.png" alt="">
+        </div>
+        <h3 class="text-2xl font-semibold mt-5">No jobs available</h3>
+        <p class="text-gray-500 mt-1">Check back soon for new job opportunities</p>
+       </div>
+    </section>
+
+    <script src="./script/data.js"></script>
+    <script src="./script/allUseAbleFunctions.js"></script>
+  </body>
+</html>
